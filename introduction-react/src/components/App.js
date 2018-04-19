@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Button, Nav, Card, CardTitle, CardText, CardBody } from 'reactstrap'
-import { Footer } from './Footer'
 import * as FontAwesome from 'react-icons/lib/fa'
+import '../style/footer.css'
+
+import { Footer } from './Footer'
 
 class App extends Component {
   render() {
@@ -15,7 +17,7 @@ class App extends Component {
         <Container>
           <Row>
             <Col>
-              {/* <div className="p-3 mb-2 bg-white text-dark text-center"> <h1 >Shoopin Cart</h1></div> */}
+              <div className="p-3 mb-2 bg-white text-dark text-center"> <h2 >The "Store"</h2></div>
             </Col>
           </Row>
           <Row>
