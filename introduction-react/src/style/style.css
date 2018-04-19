@@ -1,0 +1,27 @@
+.site-footer {
+    padding: 2em 0;
+    color: white;
+    background: black; }
+    .site-footer div.footer-social {
+      text-align: center;
+      width: 100%; }
+      .site-footer div.footer-social li {
+        display: inline-block;
+        margin-top: 40px;
+        margin-left: 12px;
+        margin-right: 12px; }
+
+.identity {
+  text-align: center;
+  width: 100%;
+  margin: 50px auto -10px;
+  color: white; }
+  .identity p {
+    color: white;
+    font-size: 20px; }
+
+    .card-img {
+      width: 50%;
+      /* height: 15vw; */
+      /* object-fit: cover; */
+  }
