@@ -1,12 +1,26 @@
-import React, { Component } from 'react'
-import { Container, Row, Col, Button, Nav, Card, CardTitle, CardText, CardBody } from 'reactstrap'
-import * as FontAwesome from 'react-icons/lib/fa'
+// Dependencies
+import React from 'react'
+import { Container, Row, Col, Nav, Jumbotron } from 'reactstrap'
+import PropTypes from 'prop-types'
+
+// Assets
+//import * as FontAwesome from 'react-icons/lib/fa'
 import '../style/footer.css'
 
+// Components
+//import Home from '../components/Home'
+import Content from '../components/Content'
 import { Footer } from './Footer'
 
-class App extends Component {
+class App extends React.Component {
+  static propTypes = {
+    children: PropTypes.object.isRequired
+  }
+
   render() {
+    const { children } = this.props
+    console.log('App', children)
+
     return (
       <div>
         <Nav className="navbar navbar-dark bg-primary">
@@ -17,19 +31,10 @@ class App extends Component {
         <Container>
           <Row>
             <Col>
-              <div className="p-3 mb-2 bg-white text-dark text-center"> <h2 >The "Store"</h2></div>
+              <Jumbotron id='jumbotron'>
+                <Content body={children} />
+              </Jumbotron>
             </Col>
-          </Row>
-          <Row>
-            <Col>
-              <div className="p-3 mb-2 bg-light text-dark text-center"> <h4 ><FontAwesome.FaTags /> Products</h4></div>
-            </Col>
-            <Col>
-              <div className="p-3 mb-2 bg-light text-dark text-center"> <h4 ><FontAwesome.FaShoppingCart /> Shopping Cart</h4></div>
-            </Col>
-          </Row>
-          <Row>
-            <Col></Col>
           </Row>
         </Container>
 
@@ -37,14 +42,9 @@ class App extends Component {
           <div className='footer-social'>
             <Footer />
           </div>
-          <div className='identity'>
-            <p>© {(new Date().getFullYear())}</p>
-          </div>
         </footer>
-
       </div>
-    );
+    )
   }
 }
-
-export default App;
+export default App

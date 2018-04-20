@@ -25,3 +25,7 @@
       /* height: 15vw; */
       /* object-fit: cover; */
   }
+
+  #jumbotron {
+    margin-top: 2rem;
+}
