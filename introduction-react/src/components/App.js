@@ -4,13 +4,13 @@ import { Container, Row, Col, Nav, Jumbotron } from 'reactstrap'
 import PropTypes from 'prop-types'
 
 // Assets
-//import * as FontAwesome from 'react-icons/lib/fa'
-import '../style/footer.css'
+import '../style/style.css'
 
 // Components
-//import Home from '../components/Home'
-import Content from '../components/Content'
-import { Footer } from './Footer'
+import Headers from './global/Headers'
+import Content from './global/Content'
+import { Footer } from './global/Footer'
+import itemHeader from '../helpers/Menu'
 
 class App extends React.Component {
   static propTypes = {
@@ -24,8 +24,7 @@ class App extends React.Component {
     return (
       <div>
         <Nav className="navbar navbar-dark bg-primary">
-          {/* <a className="navbar-brand" href="#">Default</a> */}
-          <h3 className='text-white'>Home</h3>
+          <Headers className='text-white text-left' items={itemHeader} />
         </Nav>
 
         <Container>
