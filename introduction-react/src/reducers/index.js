@@ -1,6 +1,8 @@
 // Dependencies
 import { createStore, applyMiddleware } from 'redux' //compose
 import { composeWithDevTools } from 'redux-devtools-extension'
+import axios from 'axios'
+import axiosMiddleware from 'redux-axios-middleware'
 // others
 import acciones from '../helpers/ConstantActions.js'
 import InitialState from '../data/items.json'
@@ -33,6 +35,12 @@ const logger = store => next => action => {
     console.groupEnd(action.type)
     return result
 }
-let middleware = [logger]
+
+const client = axios.create({ //all axios can be used, shown in axios documentation
+    baseURL: 'http://www.colr.org/json/color/random',
+    responseType: 'json'
+})
+
+let middleware = [logger, axiosMiddleware(client)]
 
 export default createStore(Reducer, InitialState, composeWithDevTools(applyMiddleware(...middleware)))
