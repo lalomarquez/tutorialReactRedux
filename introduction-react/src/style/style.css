@@ -1,5 +1,5 @@
 .site-footer {
-    position: fixed;
+    position: relative;
     height: 150px;
     padding: 2em 0;
     background: #000;

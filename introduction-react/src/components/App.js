@@ -2,10 +2,8 @@
 import React from 'react'
 import { Container, Row, Col, Nav, Jumbotron } from 'reactstrap'
 import PropTypes from 'prop-types'
-
 // Assets
 import '../style/style.css'
-
 // Components
 import Headers from './global/Headers'
 import Content from './global/Content'
