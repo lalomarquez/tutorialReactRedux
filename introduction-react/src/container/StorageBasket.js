@@ -10,7 +10,6 @@ import { removeItem } from '../actions/actionCreators.js'
 const StorageBasket = ({ cart, removeFromCart }) => {
     return (
         <div >
-            <h4>Componente ShoppingCart</h4>
             <div className="row col-12">
                 <Table>
                     <thead>

@@ -15,4 +15,9 @@ export default [
     title: 'Shopping Cart',
     url: '/shoppingCart'
   }
+  ,
+  {
+    title: 'Consume API',
+    url: '/ConsumeAPI'
+  }
 ]
