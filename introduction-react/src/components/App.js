@@ -19,7 +19,7 @@ class App extends React.Component {
 
   render() {
     const { children } = this.props
-    console.log('App', children)
+    // console.log('App', children)
 
     return (
       <div>

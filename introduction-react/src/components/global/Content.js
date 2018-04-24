@@ -8,7 +8,7 @@ class Content extends React.Component {
     }
     render() {
         const { body } = this.props
-        console.log('Content', body)
+        // console.log('Content', body)
         return (
             <div>
                 {body}
