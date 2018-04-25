@@ -1,6 +1,6 @@
 // Dependencies
 import React from 'react'
-import { Container, Row, Col, Nav, Jumbotron } from 'reactstrap'
+import { Container, Row, Col, Nav } from 'reactstrap'//Jumbotron
 import PropTypes from 'prop-types'
 // Assets
 import '../style/style.css'
@@ -28,9 +28,9 @@ class App extends React.Component {
         <Container>
           <Row>
             <Col>
-              <Jumbotron id='jumbotron'>
+              {/* <Jumbotron id='jumbotron'> */}
                 <Content body={children} />
-              </Jumbotron>
+              {/* </Jumbotron> */}
             </Col>
           </Row>
         </Container>

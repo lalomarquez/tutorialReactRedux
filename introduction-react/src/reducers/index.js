@@ -2,7 +2,7 @@
 import { createStore, applyMiddleware } from 'redux' //compose
 import { composeWithDevTools } from 'redux-devtools-extension'
 // others
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../helpers/ConstantActions'
+import { ADD_TO_CART, REMOVE_FROM_CART, CHANGE_COLOR } from '../helpers/ConstantActions'
 import InitialState from '../api/products.json'
 
 const Reducer = (state, action) => {
@@ -16,6 +16,11 @@ const Reducer = (state, action) => {
             return {
                 ...state,
                 cart: state.cart.filter((product, index) => index !== action.index)
+            }
+        case CHANGE_COLOR:
+            return {
+                ...state,
+                color: action.color
             }
         default:
             return state

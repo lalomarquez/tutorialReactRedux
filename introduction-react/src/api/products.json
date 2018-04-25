@@ -1,10 +1,6 @@
 {
   "cart": [],
-  "color": [
-    {
-      "nameColor": "red"
-    }
-  ],
+  "color": [],
   "products": [
     {
       "id": 1,

@@ -8,15 +8,17 @@ import Home from '../components/Home'
 import Product from '../components/Product'
 import Cart from '../components/Cart'
 import ShoppingCart from '../components/ShoppingCart'
+import BoxColor from '../components/BoxColor'
 import Page404 from '../components/Page404'
 
 const AppRoutes = () =>
     <App>
         <Switch>
-            <Route exact path='/' component={Home} /> 
+            <Route exact path='/' component={Home} />
             <Route exact path='/cart' component={Cart} />
             <Route exact path="/productList" component={Product} />
-            <Route exact path="/shoppingCart" component={ShoppingCart} />            
+            <Route exact path="/shoppingCart" component={ShoppingCart} />
+            <Route exact path="/BoxColor" component={BoxColor} />
             <Route component={Page404} />
         </Switch>
     </App>

@@ -1,4 +1,5 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../helpers/ConstantActions'
+// Dependencies
+import { ADD_TO_CART, REMOVE_FROM_CART, CHANGE_COLOR } from '../helpers/ConstantActions'
 
 const addToCart = product => {
     return {
@@ -14,4 +15,11 @@ const removeItem = index => {
     }
 }
 
-export { addToCart, removeItem }
+const changeColor = color => {
+    return {
+        type: CHANGE_COLOR,
+        color
+    }
+}
+
+export { addToCart, removeItem, changeColor }
