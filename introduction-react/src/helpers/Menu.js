@@ -17,7 +17,7 @@ export default [
   }
   ,
   {
-    title: 'Consume API',
-    url: '/ConsumeAPI'
+    title: 'Box Color',
+    url: '/BoxColor'
   }
 ]

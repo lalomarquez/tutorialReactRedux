@@ -9,7 +9,6 @@ import Product from '../components/Product'
 import Cart from '../components/Cart'
 import ShoppingCart from '../components/ShoppingCart'
 import Page404 from '../components/Page404'
-import ConsumeAPI from '../components/ConsumeAPI'
 
 const AppRoutes = () =>
     <App>
@@ -17,8 +16,7 @@ const AppRoutes = () =>
             <Route exact path='/' component={Home} /> 
             <Route exact path='/cart' component={Cart} />
             <Route exact path="/productList" component={Product} />
-            <Route exact path="/shoppingCart" component={ShoppingCart} />
-            <Route exact path="/ConsumeAPI" component={ConsumeAPI} />
+            <Route exact path="/shoppingCart" component={ShoppingCart} />            
             <Route component={Page404} />
         </Switch>
     </App>
