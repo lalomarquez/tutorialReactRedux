@@ -30,7 +30,7 @@ const ProductList = ({ products, addProduct }) => {
 
 const mapStateToProps = state => {
     return {
-        products: state.products
+        products: state.store.products
     }
 }
 

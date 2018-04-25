@@ -11,7 +11,7 @@ import { changeColor } from '../actions/actionCreators.js'
 const ChangeColorBox = ({ color, loadColor }) => {
     return (
         <div className='wrapper'>
-            <div style={{ backgroundColor: `${color}` }} className='box'>
+            <div style={{ backgroundColor: `${color.color}` }} className='box'>
                 <Button color="primary" onClick={() => loadColor()}>Change Color</Button>
             </div>
         </div>

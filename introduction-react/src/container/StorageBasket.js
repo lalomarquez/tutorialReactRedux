@@ -44,7 +44,7 @@ const StorageBasket = ({ cart, removeFromCart }) => {
 
 const mapStateToProps = state => {
     return {
-        cart: state.cart,
+        cart: state.store.cart,
     }
 }
 

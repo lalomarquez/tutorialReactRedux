@@ -1,31 +1,9 @@
 // Dependencies
-import { createStore, applyMiddleware } from 'redux' //compose
+import { createStore, applyMiddleware, combineReducers } from 'redux' //compose
 import { composeWithDevTools } from 'redux-devtools-extension'
-// others
-import { ADD_TO_CART, REMOVE_FROM_CART, CHANGE_COLOR } from '../helpers/ConstantActions'
-import InitialState from '../api/products.json'
 
-const Reducer = (state, action) => {
-    switch (action.type) {
-        case ADD_TO_CART:
-            return {
-                ...state,
-                cart: state.cart.concat(action.product),
-            }
-        case REMOVE_FROM_CART:
-            return {
-                ...state,
-                cart: state.cart.filter((product, index) => index !== action.index)
-            }
-        case CHANGE_COLOR:
-            return {
-                ...state,
-                color: action.color
-            }
-        default:
-            return state
-    }
-}
+import ReducerShoppin from './ReducerShoppin'
+import ReducerColor from './ReducerColor'
 
 //Redux Dev Tools
 //const enhancers = compose(window.devToolsExtension ? window.devToolsExtension() : f => f)
@@ -41,4 +19,9 @@ const logger = store => next => action => {
 
 let middleware = [logger]
 
-export default createStore(Reducer, InitialState, composeWithDevTools(applyMiddleware(...middleware)))
+const rootReducer = combineReducers({
+    store: ReducerShoppin,
+    color: ReducerColor    
+  });
+
+export default createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)))
