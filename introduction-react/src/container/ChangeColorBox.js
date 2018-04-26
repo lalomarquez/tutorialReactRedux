@@ -25,12 +25,15 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {    
+const mapDispatchToProps = dispatch => {
     return {
         loadColor() {
             axios.get(GET_COLOR_URL)
                 .then((response) => {
+                    console.log('RESPONSE', response)
                     dispatch(changeColor("#" + response.data.new_color))
+                }).catch(error => {
+                    console.error('FAIL :(', error)
                 })
         }
     }

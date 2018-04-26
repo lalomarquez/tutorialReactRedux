@@ -21,4 +21,14 @@ const changeColor = color => {
     }
 }
 
+// const loadColors = () => {
+//     return axios.get('http://www.colr.org/json/color/random')
+//         .then((response) => {
+//             console.log('RESPONSE', response)
+//             return response.data.new_color
+//         }).catch(error => {
+//             console.error('FAIL :-(', error)
+//         })
+// }
+
 export { addToCart, removeItem, changeColor }
