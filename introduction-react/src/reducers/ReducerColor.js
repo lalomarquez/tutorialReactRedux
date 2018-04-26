@@ -1,4 +1,4 @@
-import { CHANGE_COLOR } from '../helpers/ConstantActions'
+import { CHANGE_COLOR } from '../helpers/constActions'
 
 const initialState = {
     color: []

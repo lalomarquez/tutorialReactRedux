@@ -22,6 +22,6 @@ let middleware = [logger]
 const rootReducer = combineReducers({
     store: ReducerShoppin,
     color: ReducerColor    
-  });
+  })
 
 export default createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)))

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button } from 'reactstrap'
 
 import { changeColor } from '../actions/actionCreators.js'
+import { GET_COLOR_URL } from '../helpers/constURL'
 
 const ChangeColorBox = ({ color, loadColor }) => {
     return (
@@ -24,12 +25,11 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {    
     return {
         loadColor() {
-            axios.get('http://www.colr.org/json/color/random')
+            axios.get(GET_COLOR_URL)
                 .then((response) => {
-                    console.log(response.data)
                     dispatch(changeColor("#" + response.data.new_color))
                 })
         }

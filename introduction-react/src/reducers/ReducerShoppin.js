@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../helpers/ConstantActions'
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../helpers/constActions'
 import initialState from '../api/products.json'
 
 const ReducerShoppin = (state = initialState, action) => {
